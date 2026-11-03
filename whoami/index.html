@@ -1,0 +1,397 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Jevin Sew builds software at Booqable and contributes to Rails and Graphiti. A personal record of his work and the things he's proud of.">
+    <meta name="author" content="Jevin Sew">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Jevin Sew — notes from my corner of software">
+    <meta property="og:description" content="What I'm doing, what I'm proud of, and a few things I've built with others.">
+    <meta property="og:url" content="https://jevin.github.io/whoami/">
+    <meta property="og:image" content="https://jevin.github.io/whoami/assets/jevin.png">
+    <link rel="canonical" href="https://jevin.github.io/whoami/">
+    <title>Jevin Sew — notes from my corner of software</title>
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Jevin Sew",
+        "url": "https://jevin.github.io/whoami/",
+        "image": "https://jevin.github.io/whoami/assets/jevin.png",
+        "description": "Software developer at Booqable and contributor to Rails and Graphiti.",
+        "worksFor": {
+          "@type": "Organization",
+          "name": "Booqable",
+          "url": "https://booqable.com/"
+        },
+        "sameAs": [
+          "https://github.com/jevin"
+        ]
+      }
+    </script>
+    <style>
+      :root {
+        color-scheme: light;
+        --paper: #f5f0e5;
+        --ink: #28251f;
+        --muted: #6c6559;
+        --rule: #a69b88;
+        --accent: #a8442d;
+        --panel: #eee6d6;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      html {
+        scroll-behavior: smooth;
+      }
+
+      body {
+        margin: 0;
+        background: var(--paper);
+        color: var(--ink);
+        font-family: Georgia, "Times New Roman", serif;
+        font-size: 17px;
+        line-height: 1.65;
+      }
+
+      a {
+        color: var(--accent);
+        text-decoration-thickness: 1px;
+        text-underline-offset: 3px;
+      }
+
+      a:hover {
+        color: var(--ink);
+      }
+
+      a:focus-visible {
+        outline: 2px solid var(--accent);
+        outline-offset: 4px;
+      }
+
+      .page {
+        width: min(100% - 40px, 860px);
+        margin: 0 auto;
+      }
+
+      .masthead {
+        padding: 18px 0 12px;
+        border-bottom: 1px solid var(--rule);
+        color: var(--muted);
+        font-size: 12px;
+        letter-spacing: 0.12em;
+        text-align: center;
+        text-transform: uppercase;
+      }
+
+      .intro {
+        display: grid;
+        grid-template-columns: minmax(0, 1fr) 190px;
+        gap: 42px;
+        align-items: center;
+        padding: 58px 0 48px;
+        border-bottom: 3px double var(--rule);
+      }
+
+      .eyebrow,
+      .section-label {
+        color: var(--accent);
+        font-size: 12px;
+        font-weight: 700;
+        letter-spacing: 0.11em;
+        text-transform: uppercase;
+      }
+
+      h1,
+      h2,
+      h3,
+      p {
+        margin-top: 0;
+      }
+
+      h1 {
+        margin-bottom: 4px;
+        font-size: clamp(48px, 9vw, 82px);
+        font-weight: 500;
+        letter-spacing: -0.055em;
+        line-height: 0.98;
+      }
+
+      .dek {
+        max-width: 580px;
+        margin: 20px 0 0;
+        color: #484239;
+        font-size: 21px;
+        line-height: 1.5;
+      }
+
+      .portrait {
+        width: 190px;
+        aspect-ratio: 1;
+        border: 1px solid var(--rule);
+        padding: 6px;
+        background: var(--paper);
+        transform: rotate(2deg);
+      }
+
+      .portrait img {
+        display: block;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        filter: grayscale(1);
+      }
+
+      nav {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px 24px;
+        padding: 14px 0;
+        border-bottom: 1px solid var(--rule);
+        font-size: 14px;
+      }
+
+      nav a {
+        color: var(--ink);
+      }
+
+      main section {
+        padding: 42px 0;
+        border-bottom: 1px solid var(--rule);
+      }
+
+      .section-heading {
+        display: flex;
+        align-items: baseline;
+        gap: 14px;
+        margin-bottom: 22px;
+      }
+
+      h2 {
+        margin-bottom: 0;
+        font-size: 34px;
+        font-weight: 500;
+        letter-spacing: -0.035em;
+        line-height: 1.15;
+      }
+
+      .section-number {
+        color: var(--accent);
+        font-size: 14px;
+        font-style: italic;
+      }
+
+      .now-copy {
+        max-width: 680px;
+        font-size: 20px;
+      }
+
+      .story {
+        display: grid;
+        grid-template-columns: 140px minmax(0, 1fr);
+        gap: 24px;
+        padding: 20px 0;
+        border-top: 1px solid #d5ccbc;
+      }
+
+      .story:first-of-type {
+        border-top: 0;
+        padding-top: 0;
+      }
+
+      .story h3 {
+        margin-bottom: 7px;
+        font-size: 21px;
+        font-weight: 600;
+        line-height: 1.3;
+      }
+
+      .story p {
+        margin-bottom: 0;
+      }
+
+      .story-meta {
+        color: var(--muted);
+        font-size: 14px;
+      }
+
+      .story-meta a {
+        display: inline-block;
+        margin-top: 5px;
+      }
+
+      .work-note {
+        padding: 22px 24px;
+        background: var(--panel);
+        border-left: 3px solid var(--accent);
+      }
+
+      .work-note p:last-child {
+        margin-bottom: 0;
+      }
+
+      .work-list {
+        margin: 22px 0 0;
+        padding-left: 20px;
+      }
+
+      .work-list li {
+        margin: 12px 0;
+        padding-left: 5px;
+      }
+
+      footer {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        gap: 12px;
+        padding: 22px 0 34px;
+        color: var(--muted);
+        font-size: 14px;
+      }
+
+      footer a {
+        margin-left: 14px;
+      }
+
+      @media (max-width: 620px) {
+        body {
+          font-size: 16px;
+        }
+
+        .page {
+          width: min(100% - 32px, 860px);
+        }
+
+        .intro {
+          grid-template-columns: 1fr;
+          gap: 24px;
+          padding: 38px 0 34px;
+        }
+
+        .portrait {
+          grid-row: 1;
+          width: 138px;
+        }
+
+        .dek {
+          font-size: 19px;
+        }
+
+        main section {
+          padding: 32px 0;
+        }
+
+        .story {
+          grid-template-columns: 1fr;
+          gap: 7px;
+        }
+
+        .story-meta a {
+          margin: 0 0 0 7px;
+        }
+
+        .work-note {
+          padding: 18px;
+        }
+      }
+
+      @media (prefers-reduced-motion: reduce) {
+        html {
+          scroll-behavior: auto;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="page">
+      <header>
+        <div class="masthead">Notes from my corner of software</div>
+        <div class="intro">
+          <div>
+            <div class="eyebrow">A personal record</div>
+            <h1>Jevin Sew</h1>
+            <p class="dek">I build software at Booqable and contribute to the Ruby ecosystem. This is a place to keep the work, ideas, and small details I’m proud of in one place.</p>
+          </div>
+          <div class="portrait">
+            <img src="assets/jevin.png" alt="Portrait of Jevin Sew">
+          </div>
+        </div>
+        <nav aria-label="Page sections">
+          <a href="#now">Right now</a>
+          <a href="#proud-of">Things I’m proud of</a>
+          <a href="#booqable">At Booqable</a>
+          <a href="https://github.com/jevin">GitHub profile</a>
+        </nav>
+      </header>
+
+      <main>
+        <section id="now">
+          <div class="section-heading">
+            <span class="section-number">01</span>
+            <h2>Right now</h2>
+          </div>
+          <p class="now-copy">I’m working at <a href="https://booqable.com/">Booqable</a>, building and improving software for rental businesses. Outside that, I enjoy making Ruby tools and fixing the little edge cases that make a big difference to people using them.</p>
+        </section>
+
+        <section id="proud-of">
+          <div class="section-heading">
+            <span class="section-number">02</span>
+            <h2>Things I’m proud of</h2>
+          </div>
+
+          <article class="story">
+            <div class="story-meta">Graphiti<br>October 2026</div>
+            <div>
+              <h3>Fixed nested includes dropped by the sideload allowlist</h3>
+              <p>Corrected a query-planning issue that could turn nested includes into N+1 queries, while keeping the response data unchanged.</p>
+              <p><a href="https://github.com/graphiti-api/graphiti/pull/549">Read the merged pull request</a></p>
+            </div>
+          </article>
+
+          <article class="story">
+            <div class="story-meta">Graphiti<br>October 2026</div>
+            <div>
+              <h3>Made update responses render fresh included records</h3>
+              <p>Fixed stale included records after updates when sideloads were shared across include paths or came through polymorphic relationships.</p>
+              <p><a href="https://github.com/graphiti-api/graphiti/pull/552">Read the merged pull request</a></p>
+            </div>
+          </article>
+
+          <article class="story">
+            <div class="story-meta">Ruby on Rails<br>October 2025</div>
+            <div>
+              <h3>Made password reset token expiry configurable</h3>
+              <p>Added an option to set a custom reset-token lifetime in <code>has_secure_password</code>, preserving the existing 15-minute default.</p>
+              <p><a href="https://github.com/rails/rails/pull/55574">Read the merged pull request</a></p>
+            </div>
+          </article>
+        </section>
+
+        <section id="booqable">
+          <div class="section-heading">
+            <span class="section-number">03</span>
+            <h2>At Booqable</h2>
+          </div>
+          <div class="work-note">
+            <p>Some of my work at Booqable has been about making storefront features fit together cleanly: giving store owners useful controls, making customer journeys behave as expected, and keeping integrations in step with the product.</p>
+          </div>
+          <ul class="work-list">
+            <li><strong>Cookie notices and privacy controls:</strong> Implemented cookie-notice support across storefront themes, including cookie preferences on the privacy policy page. <a href="https://github.com/booqable/kylie-theme/pull/117">Kylie theme</a> · <a href="https://github.com/booqable/impact-theme/pull/56">Impact theme</a> · <a href="https://github.com/booqable/kylie-theme/pull/110">privacy policy page</a></li>
+            <li><strong>Account and checkout flows:</strong> Added a guest-checkout link in the right checkout context and hid account-only pages when customer accounts are disabled. <a href="https://github.com/booqable/kylie-theme/pull/101">Guest checkout</a> · <a href="https://github.com/booqable/kylie-theme/pull/121">Account pages</a></li>
+            <li><strong>Collections and API docs:</strong> Added collection shortcodes to the WordPress plugin and updated API docs to reflect categories being replaced by collections. <a href="https://github.com/booqable/wordpress-plugin/pull/18">WordPress collections</a> · <a href="https://github.com/booqable/api-documentation/pull/48">API documentation</a></li>
+          </ul>
+        </section>
+      </main>
+
+      <footer>
+        <span>Jevin Sew · an ongoing record, not a résumé</span>
+        <span><a href="https://github.com/jevin">GitHub</a></span>
+      </footer>
+    </div>
+  </body>
+</html>
